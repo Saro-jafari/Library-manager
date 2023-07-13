@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4DD4BC6C-4835-410B-B41D-E701606BA05A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>library</RootNamespace>
+    <AssemblyName>library</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.Core.3.7.107.7\lib\net45\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.S3, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.S3.3.7.106\lib\net45\AWSSDK.S3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="microsoft.visualbasic.powerpacks">
+      <HintPath>.\microsoft.visualbasic.powerpacks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebCam_Capture, Version=1.0.2395.24959, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WebCam_Capture.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="booktypecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="booktypecs.Designer.cs">
+      <DependentUpon>booktypecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase.cs" />
+    <Compile Include="FormAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddUser.Designer.cs">
+      <DependentUpon>FormAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmdepository.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmdepository.Designer.cs">
+      <DependentUpon>frmdepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditUser.Designer.cs">
+      <DependentUpon>FrmEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddbookcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddbookcs.Designer.cs">
+      <DependentUpon>FormAddbookcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmnote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmnote.Designer.cs">
+      <DependentUpon>frmnote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmuser.Designer.cs">
+      <DependentUpon>Frmuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login-form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login-form.Designer.cs">
+      <DependentUpon>Login-form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formbook.Designer.cs">
+      <DependentUpon>Formbook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="libraryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>libraryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="booktypecs.resx">
+      <DependentUpon>booktypecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddUser.resx">
+      <DependentUpon>FormAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmdepository.resx">
+      <DependentUpon>frmdepository.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditUser.resx">
+      <DependentUpon>FrmEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddbookcs.resx">
+      <DependentUpon>FormAddbookcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmnote.resx">
+      <DependentUpon>frmnote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmuser.resx">
+      <DependentUpon>Frmuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login-form.resx">
+      <DependentUpon>Login-form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formbook.resx">
+      <DependentUpon>Formbook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="libraryDataSet.xsc">
+      <DependentUpon>libraryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="libraryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>libraryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="libraryDataSet.xss">
+      <DependentUpon>libraryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ready-back-school.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-638383032-170667a %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\AWSSDK.S3.3.7.106\analyzers\dotnet\cs\AWSSDK.S3.CodeAnalysis.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
